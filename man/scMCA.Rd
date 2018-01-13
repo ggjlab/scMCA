@@ -3,14 +3,14 @@
 \name{scMCA}
 \alias{scMCA}
 \title{Mouse Cell Atlas mapping
-description hello world}
+description}
 \usage{
 scMCA(scdata, plot_heat = TRUE, interactive_plot = TRUE, numbers_plot = 3)
 }
 \arguments{
 \item{scdata}{data.frame or matrix, col correspond to cells and rows correspond to genes}
 
-\item{plot_heat}{default TRUE, boolean, this will return the result alongwith a heatmap}
+\item{plot_heat}{default TRUE, boolean, this will return the result alongwith a heatmap, else will return in a list}
 
 \item{interactive_plot}{defalut is TRUE, boolean, IF TRUE, a plotly package will be used for interactive plotting}
 
@@ -18,5 +18,5 @@ scMCA(scdata, plot_heat = TRUE, interactive_plot = TRUE, numbers_plot = 3)
 }
 \description{
 Mouse Cell Atlas mapping
-description hello world
+description
 }
