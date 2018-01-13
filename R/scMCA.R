@@ -67,6 +67,7 @@ gettissue <- function(x,Num=3){
 #' @import ggplot2
 #' @export
 plotMCA <- function(data){
+  data(ref.expr)
   df_heatmap1 <- melt(t(data))
   colnames(df_heatmap1)<-c('cell','type','value')
   p<-ggplot(df_heatmap1, aes(cell,type )) +
