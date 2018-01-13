@@ -1,6 +1,6 @@
 # scMCA
 An simple R package for large scale data(large DGE) from [Mouse Cell Atlas](http://bis.zju.edu.cn)
-, to reduce burdon of our main Server
+,to alleviate burdens of our main Server
 ### Installation
 ```R
 #This require devtools 
