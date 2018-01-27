@@ -20,6 +20,7 @@ scMCA <- function(scdata,plot_heat=TRUE,interactive_plot=TRUE,numbers_plot=3){
     if(i%in%rownames(scdata))tst.expr[i,]<- scdata[i,]
   }
   tst.expr[is.na(tst.expr)]<-0
+  tst.expr<-log(tst.expr+1)
   cors <- cor(ref.expr,tst.expr)
 
   cors_index <- apply(cors,2,gettissue,numbers_plot)
