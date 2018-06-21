@@ -17,6 +17,7 @@ scMCA <- function(scdata,numbers_plot=3, shiny_ui = T){
     if(i%in%rownames(scdata))tst.expr[i,]<- scdata[i,]
   }
   tst.expr[is.na(tst.expr)]<-0
+  tst.expr<-as.matrix(t(t(tst.expr)/colSums(tst.expr))*100000)
   tst.expr<-log(tst.expr+1)
   cors <- cor(log(ref.expr+1),tst.expr)
 
