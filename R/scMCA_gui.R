@@ -31,10 +31,7 @@ scMCA_vis <- function(mca_result){
                  ),
                  checkboxInput("checkcells", label = "Show Cells' name", value = TRUE),
                  checkboxInput("checkbar", label = "Show Color Bar", value = TRUE),
-                 checkboxInput("checktree", label = "Show cluster tree", value = TRUE),
-                 verbatimTextOutput("fileinfout"),
-                 h4("result info"),
-                 verbatimTextOutput("resultout")
+                 checkboxInput("checktree", label = "Show cluster tree", value = TRUE)
 
                ),
                mainPanel(
@@ -70,10 +67,6 @@ scMCA_vis <- function(mca_result){
     heightSize <- function() {
       length(unique(cors_data()$`Cell type`)) * 10+100
     }
-    output$fileinfout <- renderText({
-      paste(input$txt, input$slider, format(input$date),class(mca_result), sep = ", ")
-    })
-
     output$heatmapplot <- renderPlot({
         plotMCA(mca_result,numbers_plot = input$slider, col_font_size=input$col_size,row_font_size=input$row_size,show_col = input$checkcells, show_bar = input$checkbar, show_tree = input$checktree)
     },height = heightSize)
