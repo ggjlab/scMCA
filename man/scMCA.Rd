@@ -5,16 +5,16 @@
 \title{Mouse Cell Atlas mapping
 description}
 \usage{
-scMCA(scdata, plot_heat = TRUE, interactive_plot = TRUE, numbers_plot = 3)
+scMCA(scdata, numbers_plot = 3, shiny_ui = T)
 }
 \arguments{
 \item{scdata}{data.frame or matrix, col correspond to cells and rows correspond to genes}
 
+\item{numbers_plot}{default is 3, number, it will return top "numbers_plot" records in the plot}
+
 \item{plot_heat}{default TRUE, boolean, this will return the result alongwith a heatmap, else will return in a list}
 
 \item{interactive_plot}{defalut is TRUE, boolean, IF TRUE, a plotly package will be used for interactive plotting}
-
-\item{numbers_plot}{default is 3, number, it will return top "numbers_plot" records in the plot}
 }
 \description{
 Mouse Cell Atlas mapping
