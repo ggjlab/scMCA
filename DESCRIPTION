@@ -1,7 +1,7 @@
 Package: scMCA
 Type: Package
 Title: Mouse Cell atlas 
-Version: 0.1.0
+Version: 0.2.0
 Author: Guoji Guo
 Maintainer: Yincong Zhou <yczhou@zju.edu.cn>
 Description: Mouse cell atlas package for single cell mapping
@@ -10,3 +10,5 @@ Encoding: UTF-8
 LazyData: true
 Imports: ggplot2,plotly,reshape2
 RoxygenNote: 6.0.1
+VignetteBuilder: knitr
+Suggests: BiocStyle, knitr, rmarkdown
