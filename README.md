@@ -9,7 +9,7 @@ Now we add a UI for visulizing the scMCA reuslt.
 
 ```R
 #This require devtools  
-install.package('devtools')
+install.packages('devtools')
 library(devtools)
 # scMCA requires ggplot2/reshape2/plotly/shiny/shinythemes/shiny
 install_github("ggjlab/scMCA")
