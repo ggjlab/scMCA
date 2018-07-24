@@ -85,5 +85,8 @@ plotMCA <- function(mca_result,interactive_plot=F, numbers_plot=3, col_font_size
       height= length(p$tree_row$order)*10+230
       plot_ly(x=colnames(inter_data),y=rownames(inter_data),z = inter_data, colors = colorRamp(c("grey", "white","red")),height=height, type = "heatmap", showscale=show_bar) %>% layout(autosize=T,  margin=list(l=0,r=230,b=180,t=20,pad=4),font=list(size=row_font_size),xaxis=list(showticklabels=show_col),yaxis=list(side="right"))
     }
+    else{
+      p
+    }
 
 }
