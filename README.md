@@ -41,5 +41,5 @@ The return of scMCA() is a list which contains 4 parts.
 scMCA_vis(mca_result)
 ```
 
-scMCA_vis() provides a bref function for visualizing and download of scMCA results
+scMCA_vis() provides a bref function for visualizing and downloading of scMCA results
 ![scMCA_vis](http://bis.zju.edu.cn/MCA/assets/img/scMCA_vis_demo.png)
