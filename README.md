@@ -19,8 +19,29 @@ install_github("ggjlab/scMCA")
 
 ```R
 library(scMCA)
-data(mca_lung)
+# mca_lung is an example expression matrix from MCA project.
+> data(mca_lung)
+> dim(mca_lung)
+[1] 2884   80
+# 2884 genes expression value of 80 cells
+
+# scMCA has two parameters , single cell expression matrix(scdata) and 
+# the number of most similar cell types
+> mca_result <- scMCA(scdata = mca_lung, numbers_plot = 3)
+
+```
+The return of scMCA() is a list which contains 4 parts.
+* cors_matrix: Pearson correlation coefficient matrix of each cell and cell type.
+* top_cors: equals to numbers_plot 
+* scMCA: the most relevant cell type for each query cell
+* scMCA_probility: the top n relevant cell types for each query cell
+
+```R
+# open shiny for visualize result for scMCA
+scMCA_vis(mca_result)
 ```
 
+scMCA_vis()
 
-
+scMCA_vis() provides a bref function for visualizing and download of scMCA results
+![scMCA_vis](http://bis.zju.edu.cn/MCA/assets/img/scMCA_vis_demo.png)
