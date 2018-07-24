@@ -3,13 +3,11 @@
 #' Mouse Cell Atlas mapping
 #' description
 #' @param scdata data.frame or matrix, col correspond to cells and rows correspond to genes
-#' @param plot_heat default TRUE, boolean, this will return the result alongwith a heatmap, else will return in a list
-#' @param interactive_plot defalut is TRUE, boolean, IF TRUE, a plotly package will be used for interactive plotting
 #' @param numbers_plot default is 3, number, it will return top "numbers_plot" records in the plot
 #' @importFrom reshape2 melt
 #' @export
 
-scMCA <- function(scdata,numbers_plot=3, shiny_ui = T){
+scMCA <- function(scdata,numbers_plot=3){
   tst.expr <- data.frame(matrix(nrow = dim(ref.expr)[1],ncol=dim(scdata)[2]))
   rownames(tst.expr)<-rownames(ref.expr)
   colnames(tst.expr)<-colnames(scdata)
